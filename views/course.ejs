@@ -1,0 +1,27 @@
+
+<body>
+<h1>Course</h1>
+
+
+<form action='/web/courses/create'  method="POST">
+  <div>
+    <label for="name">Course Name </label>
+    <input type="text" id="name" name="name" required minlength="5"> 
+  </div>
+  <br>
+  <div>
+    <label >Course Code </label>
+    <input type="text" id="code" name="code" required pattern = "[a-zA-Z]{3}[0-9]{3}" title =" Course Code must be 3 letters followed by 3 numbers" > 
+  </div>
+  <br>
+  <div>
+    <label > Course Description </label>
+    <input type="text" id="des" name="des" optional maxlength="200" style = "height: 40px; width:280px; ">
+  </div>
+  <br>
+  <button type="submit">Add</button>
+</form>
+
+
+
+</body>

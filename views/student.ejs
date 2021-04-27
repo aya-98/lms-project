@@ -1,0 +1,23 @@
+<body>
+<h1> Student </h1>
+
+
+<form action='/web/students/create'  method="POST">
+  <div>
+    <label for="name">Student Name </label>
+    <input type="text" id="name" name="name"  required pattern = "[A-Za-z'’–—-]+" title=" only letters in both cases, apostrophe and dashes are allowed for Student Name" > 
+  </div>
+  <br>
+  <div>
+    <label >Student Code </label>
+    <input type="text" id="code" name="code" required pattern=".{7}" title =" Student Code must match 7 characters" > 
+  </div>
+  <br>
+  
+  <button type="submit">Add</button>
+</form>
+
+
+
+
+</body>
