@@ -4,10 +4,15 @@ const Joi = require("joi");
 
 const app = express();
 
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended:true}));
+
+app.use(bodyParser.json());
+
 
 app.set('view-engine' , 'ejs')
 
-app.use(express.urlencoded( { extended: true}))
+
 
 app.use(express.json());
 
@@ -245,9 +250,6 @@ function validateStudent(student){
 
 
 
-app.listen("3000", () => {
+const port = process.env.PORT || 3000;
 
-  console.log("Server started on port 3000");
-
-});
-
+app.listen(port, () => console.log(`Listening on port ${port}...`));
